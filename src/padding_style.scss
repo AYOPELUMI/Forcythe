@@ -1,0 +1,13 @@
+@import "../../ReponsiveStyles/mobileDesign.scss";
+
+.section-padding{
+    @include xs{
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+    @include md{
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+
+    }
+}
