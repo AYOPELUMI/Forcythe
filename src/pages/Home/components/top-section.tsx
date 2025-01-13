@@ -33,7 +33,7 @@ const TopSection = () => {
                     <div className="max-w-[56rem]">
                         <div className="min-h-[180px]">
 
-                            <h1 className="text-[3.5rem] sm:text-[4rem] lg:text-[5rem] font-normal leading-[1] mb-7">
+                            <h1 className="text-[3.5rem] sm:text-[4rem] lg:text-[5rem] font-normal leading-[1] mb-7 break-words text-wrap">
                                 <TypingAnimation
                                     text="We build "
                                     animateBy="letter"
@@ -55,7 +55,7 @@ const TopSection = () => {
 
                                 {/* Animate the rest of the text */}
                                 <TypingAnimation
-                                    text="that shape a better future"
+                                    text=" that shape a better future"
                                     animateBy="letter"
                                     opacityFade={true}
                                     delay={1.5}
@@ -69,12 +69,14 @@ const TopSection = () => {
                             <div>
                                 <p className="text-darkGrey text-base md:text-lg mb-8 leading-7">
                                     <div>
-                                        {
-                                            description.split(" ").map((word, index) => {
-                                                return <span key={`word ${index}`} className="inline-block">
-                                                    {word}
-                                                </span>
-                                            })}
+                                        <TypingAnimation
+                                            text={description}
+                                            animateBy="word"
+                                            opacityFade={true}
+                                            delay={2}
+                                            duration={0.5}
+                                            className=""
+                                        />
 
                                     </div>
                                 </p>
@@ -90,7 +92,35 @@ const TopSection = () => {
             <div className="py-10">
                 <div className="min-h-[60px]">
                     <p className="text-[2rem] leading-[2.5rem] sm:text-[2.2rem] sm:leading-[2.5rem] lg:text-[2.6rem] lg:leading-[3rem] mb-12 max-w-[90%] mx-auto text-center">
-                        Success in Motion - Our client's journey
+
+                        <TypingAnimation
+                            text="Succes in "
+                            animateBy="word"
+                            opacityFade={true}
+                            delay={2.5}
+                            duration={0.3}
+                            className=""
+                        />
+
+
+                        <TypingAnimation
+                            text="Motion"
+                            animateBy="word"
+                            opacityFade={true}
+                            delay={2.5}
+                            duration={0.3}
+                            className="text-accent"
+                        />
+
+
+                        <TypingAnimation
+                            text=" - Our client's journey"
+                            animateBy="word"
+                            opacityFade={true}
+                            delay={2.6}
+                            duration={0.3}
+                            className=""
+                        />
                     </p>
                 </div>
                 <div className="flex flex-col gap-5" >

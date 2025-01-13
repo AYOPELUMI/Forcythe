@@ -6,6 +6,7 @@ import TypingEffectWithColor from './components/typing-animation'
 import FourthSection from './components/fourth-section'
 import SeventhSection from './components/seventh-section'
 import FifthSection from './components/fifth-section'
+import SixthSection from './components/sixth-section'
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
             <ThridSection />
             <FourthSection />
             <FifthSection />
+            <SixthSection />
             <SeventhSection />
         </>
     )

@@ -5,9 +5,17 @@ import planLaunch from "../../../assets/images/svgs/plan-launch.svg";
 import planDevelop from "../../../assets/images/svgs/plan-develop.svg";
 import planDesign from "../../../assets/images/svgs/plan-design.svg";
 import Button from '../../../components/button';
+import TypingAnimation from './typing-animation-motion';
+import { useInView } from 'react-intersection-observer';
 
 const ThridSection = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
+
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true, // Run animation only once
+    });
+
     const overlays = [
         {
             name: "Idea",
@@ -35,10 +43,50 @@ const ThridSection = () => {
         }
     ]
     return (
-        <div className="section-padding py-20">
+        <div ref={ref} className="section-padding py-20">
             <div className="mb-12 xl:mb-0 max-w-[45rem]">
                 <p className="text-[2rem] leading-[2.5rem] sm:text-[2.2rem] sm:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3rem]">
-                    From Spark to Spotlight: we take you every step of the way to success
+
+                    <TypingAnimation
+                        text="From "
+                        animateBy="word"
+                        opacityFade={true}
+                        delay={0}
+                        duration={0.1}
+                        className=""
+                    /> <TypingAnimation
+                        text="Spark"
+                        animateBy="word"
+                        opacityFade={true}
+                        delay={0.3}
+                        duration={0.1}
+                        className="text-accent"
+                    />
+                    <TypingAnimation
+                        text=" to "
+                        animateBy="word"
+                        opacityFade={true}
+                        delay={0.45}
+                        duration={0.1}
+                        className=""
+                    />
+                    <TypingAnimation
+                        text="Spotlight: "
+                        animateBy="word"
+                        opacityFade={true}
+                        delay={0.55}
+                        duration={0.1}
+                        className="text-accent"
+                    />
+                    <TypingAnimation
+                        text="we take you every step of the way to success"
+                        animateBy="word"
+                        opacityFade={true}
+                        delay={0.6}
+                        duration={0.3}
+                        className=""
+                    />
+
                 </p>
             </div>
             <div className="flex lg:items-end flex-col md:flex-row">

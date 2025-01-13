@@ -21,7 +21,8 @@ colors: {
       "secondaryBackground": "#071626",
       "accent": "#60a6e7",
       "accent2" : "#60a6e7",
-      "accent3" : "#0c2645"
+      "accent3" : "#0c2645",
+      "darkGrey" : "#aea9b1"
     },
   },
   plugins: [

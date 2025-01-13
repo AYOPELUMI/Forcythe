@@ -10,6 +10,8 @@ import edwin from "../../../assets/images/svgs/founders/edwin.svg";
 import execCeo from "../../../assets/images/svgs/founders/executive-pro-ceo.svg";
 import iwariaFounder from "../../../assets/images/svgs/founders/iwaria-founder.svg";
 import Card from './card';
+import TypingAnimation from './typing-animation-motion';
+import { useInView } from 'react-intersection-observer';
 
 export type Story = {
     image: string;
@@ -23,6 +25,13 @@ export type Story = {
 const SecondSection = () => {
     const [selectedIndex, setSelectedIndex] = useState(0); // State to manage the selected index
     const [isManual, setIsManual] = useState(false);
+
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true, // Run animation only once
+    });
+
+
     const stories: Story[] = [
         {
             image: starks,
@@ -86,10 +95,37 @@ const SecondSection = () => {
         setTimeout(() => setIsManual(false), 15000); // Resume auto-changing after 15 seconds
     };
     return (
-        <div className=" section-padding py-10">
+        <div ref={ref} className=" section-padding py-10">
             <div>
                 <p className="text-[2rem] leading-[2.5rem] sm:text-[2.2rem] sm:leading-[2.5rem] lg:text-[2.6rem] lg:leading-[3.5rem] mb-12 max-w-4xl mx-auto text-center">
-                    <span>Discover the transformative stories of startups that scaled new heights with us</span>
+
+                    <TypingAnimation
+                        text="Discover the "
+                        animateBy="word"
+                        opacityFade={true}
+                        delay={0.3}
+                        duration={0.3}
+                        className=""
+                    />
+
+                    <TypingAnimation
+                        text="transformative stories "
+                        animateBy="word"
+                        opacityFade={true}
+                        delay={0.6}
+                        duration={0.3}
+                        className="text-accent"
+                    />
+
+                    <TypingAnimation
+                        text="of startups that scaled new heights with us"
+                        animateBy="word"
+                        opacityFade={true}
+                        delay={0.9}
+                        duration={0.3}
+                        className=""
+                    />
+
                 </p>
             </div>
 
