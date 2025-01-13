@@ -9,20 +9,59 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #1f3449; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
+  --num-clients: 50;
+  --num-projects: 120;
+  --num-teamLeads: 10;
+  --num-gloriousYears: 10;
+}
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 10px;
+  margin: 30px;
+  padding: 5px;
+  display: none;
+}
+*::-webkit-scrollbar-track {
+  display: none;
+}
+*::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@keyframes counter {
+  from {
+    counter-reset: num 0;
+  }
+  to {
+    counter-increment: num var(--num);
+  }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Edge */
+}

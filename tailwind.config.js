@@ -6,8 +6,22 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        counter: 'counter 3s ease-out forwards',
+      },
+      keyframes: {
+        counter: {
+          '0%': { counterReset: 'num 0' },
+          '100%': { counterIncrement: 'num var(--num)' },
+        },
+      },
+      
 colors: {
-      "secondaryBackground": "#071626"
+      "primaryBackground": "#030516",
+      "secondaryBackground": "#071626",
+      "accent": "#60a6e7",
+      "accent2" : "#60a6e7",
+      "accent3" : "#0c2645"
     },
   },
   plugins: [

@@ -1,6 +1,7 @@
-@import "../../ReponsiveStyles/mobileDesign.scss";
+@import "./mobileDesign.scss";
 
 .section-padding{
+
     @include xs{
         padding-right: 1.25rem;
         padding-left: 1.25rem;
@@ -10,4 +11,25 @@
         padding-left: 2.5rem;
 
     }
+
+    @include lg{
+        padding-right: 3.5rem;
+        padding-left: 3.5rem; 
+    }
+
+    @include xl{
+        padding-right:7rem;
+        padding-left: 7rem;
+    }
 }
+
+
+.rfm-initial-child-container {
+    flex: 0 0 auto;
+    display: flex
+;
+    min-width: auto;
+    flex-direction: row;
+    align-items: center;
+}
+
