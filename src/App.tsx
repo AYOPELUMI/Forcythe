@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import "./padding_style.scss";
 import './App.css'
 import Header from './components/header'
@@ -7,7 +5,7 @@ import Footer from './components/footer'
 import Home from './pages/Home/home';
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <div className='bg-primaryBackground w-screen overflow-hidden'>

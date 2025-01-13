@@ -1,4 +1,4 @@
-import React from 'react'
+
 import "../padding_style.scss"
 import logo from '../assets/images/svgs/forcythe logo.svg';
 import facebook from '../assets/images/svgs/facebook.svg';
@@ -91,7 +91,7 @@ const Footer = () => {
                         </p>
                         <div className="mt-10 hidden md:flex items-center gap-2">
                             {
-                                socialLinks.map((value, index) => {
+                                socialLinks.map((value) => {
                                     return <a key={value.link} target="_blank" className="w-9 h-9 cursor-pointer rounded-full border-[1px] border-accent flex justify-center items-center" href={value.link}>
                                         <img alt="social" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" src={value.icon} style={{ color: "transparent" }}></img>
                                     </a>
@@ -104,7 +104,7 @@ const Footer = () => {
                         <h3 className="mb-8 text-2xl text-left font-bold">Company</h3>
                         <ul className="flex flex-col items-start gap-2">
                             {
-                                links.map((value, index) => {
+                                links.map((value) => {
                                     return <li key={value.link} className="text-base text-accent2 font-medium">
                                         <a href={value.link}>
                                             <span>{value.name}</span>
@@ -116,7 +116,7 @@ const Footer = () => {
                         </ul>
                         <div className="mt-10 flex md:hidden items-center gap-2 w-fit mx-auto">
                             {
-                                socialLinks.map((value, index) => {
+                                socialLinks.map((value) => {
                                     return <a key={value.link} target="_blank" className='w-9 h-9 cursor-pointer rounded-full border-[1px] border-accent flex justify-center items-center' href={value.link}>
                                         <img alt="social" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" src={value.icon} style={{ color: "transparent" }}></img>
                                     </a>

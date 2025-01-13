@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Button from '../../../components/button'
 import TypingAnimation from './typing-animation-motion'
 
@@ -48,7 +48,7 @@ const SixthSection = () => {
             </div>
 
             <div className="blogs grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
-                {blogs.map((value, index) => (
+                {blogs.map((value) => (
 
                     <a key={`blog-${value.title}`} className="w-full pb-5 rounded-[1.3rem] relative overflow-hidden cursor-pointer group hover:shadow-sm hover:shadow-accent transition-all duration-500" href="#">
                         <div className="h-60 sm:h-56 relative mb-6">

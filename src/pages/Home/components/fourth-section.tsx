@@ -1,4 +1,4 @@
-import React from 'react'
+
 import "../../../padding_style.scss";
 
 const FourthSection = () => {

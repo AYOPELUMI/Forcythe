@@ -20,7 +20,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
     className = "",
 }) => {
     const [items, setItems] = useState<string[]>([]);
-    const { ref, inView } = useInView({
+    const { ref } = useInView({
         threshold: 0,
         triggerOnce: true, // Run animation only once
     });

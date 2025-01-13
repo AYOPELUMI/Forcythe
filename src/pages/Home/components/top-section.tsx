@@ -1,4 +1,4 @@
-import React from 'react'
+
 import background from '../../../assets/images/svgs/header-background.svg';
 import Button from '../../../components/button';
 import Marquee from 'react-fast-marquee';

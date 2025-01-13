@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Story } from './second-section'
 import TypingAnimation from './typing-animation-motion';
 

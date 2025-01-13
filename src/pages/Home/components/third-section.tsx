@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useState } from 'react'
 import cameraMan from "../../../assets/images/svgs/camera-man.svg";
 import planLaunch from "../../../assets/images/svgs/plan-launch.svg";
@@ -11,7 +11,7 @@ import { useInView } from 'react-intersection-observer';
 const ThridSection = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
-    const { ref, inView } = useInView({
+    const { ref } = useInView({
         threshold: 0,
         triggerOnce: true, // Run animation only once
     });

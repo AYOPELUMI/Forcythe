@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import stacai from "../../../assets/images/svgs/stacai.svg";
 import starks from "../../../assets/images/svgs/starks.svg";
 import exec from "../../../assets/images/svgs/ExecutivePros Logo.svg";
@@ -26,7 +26,7 @@ const SecondSection = () => {
     const [selectedIndex, setSelectedIndex] = useState(0); // State to manage the selected index
     const [isManual, setIsManual] = useState(false);
 
-    const { ref, inView } = useInView({
+    const { ref } = useInView({
         threshold: 0,
         triggerOnce: true, // Run animation only once
     });
